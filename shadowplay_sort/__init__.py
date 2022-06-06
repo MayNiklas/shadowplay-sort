@@ -8,19 +8,18 @@ def get_date(file):
     Get the date from the file name
     """
 
+    split = file.split('.')
+    date_string = split[0] + '.' + split[1] + '.' + split[2] + '.' + split[3] + '.' + split[4]
+
     if ".DVR.mp4" in file:
-        if "Valorant" in file:
+        if "Valorant" in date_string:
             date = datetime.strptime(
-                file[:-11], 'Valorant %Y.%m.%d - %H.%M.%S')
+                date_string, 'Valorant %Y.%m.%d - %H.%M.%S')
 
     if ".png" in file:
-        if "Valorant" in file:
-            try:
-                date = datetime.strptime(
-                    file[:-7], 'Valorant Screenshot %Y.%m.%d - %H.%M.%S')
-            except ValueError:
-                date = datetime.strptime(
-                    file[:-8], 'Valorant Screenshot %Y.%m.%d - %H.%M.%S')
+        if "Valorant" in date_string:
+            date = datetime.strptime(
+                date_string, 'Valorant Screenshot %Y.%m.%d - %H.%M.%S')
     return (date)
 
 
