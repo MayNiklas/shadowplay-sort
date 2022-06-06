@@ -10,6 +10,6 @@ setup(
     description='sort shadowplay files after date',
     packages=['shadowplay_sort'],
     entry_points={
-        'console_scripts': ['shadowplay-sort=shadowplay_sort:__main__']
+        'console_scripts': ['shadowplay-sort=shadowplay_sort:main']
     },
 )
