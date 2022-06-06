@@ -17,11 +17,6 @@ To solve this problem, I created this tool.
 - Videos / Recordings / Valorant / 2022 / 06 / 05 / videos / Valorant 2022.06.05 - 22.03.42.05.DVR.mp4
 - Videos / Recordings / Valorant / 2022 / 06 / 05 / screenshots / Valorant Screenshot 2022.06.05 - 22.05.37.85.png
 
-## Status of the tool
-
-Currently, I still have to implement two different features, for the sorting to work with any game.
-Currently, I have implemented the sorting for the game Valorant. Valorant is hard coded in the tool. I also need to find a way, to more effiently detect the date used in the filename.
-
 ## Usage
 
 ### Nix & NixOS

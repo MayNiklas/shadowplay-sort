@@ -12,15 +12,12 @@ def get_date(file):
     date_string = split[0] + '.' + split[1] + '.' + split[2] + '.' + split[3] + '.' + split[4]
 
     if ".DVR.mp4" in file:
-        if "Valorant" in date_string:
-            date = datetime.strptime(
-                date_string, 'Valorant %Y.%m.%d - %H.%M.%S')
+        date_string = date_string.split(' ', 1)[1]
 
     if ".png" in file:
-        if "Valorant" in date_string:
-            date = datetime.strptime(
-                date_string, 'Valorant Screenshot %Y.%m.%d - %H.%M.%S')
-    return (date)
+        date_string = date_string.split(' ', 2)[2]
+
+    return datetime.strptime(date_string, '%Y.%m.%d - %H.%M.%S')
 
 
 def get_type(file):
