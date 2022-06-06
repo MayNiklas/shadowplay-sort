@@ -26,7 +26,7 @@ To solve this problem, I created this tool.
 nix run .#shadowplay-sort
 
 # run the package from anywhere
-nix run 'github:mayniklas#shadowplay-sort'
+nix run 'github:mayniklas/shadowplay-sort'
 
 # build the package
 nix build .#shadowplay-sort
